@@ -6,6 +6,7 @@ General Process:
 - updatesource.sh
 - buildkernel.sh
 - buildbase.sh
+- postbuild.sh
 
 Source is updated via CVS according to the process here:
 
