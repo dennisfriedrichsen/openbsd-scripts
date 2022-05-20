@@ -1,6 +1,6 @@
 #! /bin/sh
 
-LOG_FILE=~/logs/buildworld_$(date +"%FT%T").log
+LOG_FILE=~/logs/buildbase_$(date +"%FT%T").log
 
 cd /usr/src
 date >> $LOG_FILE
