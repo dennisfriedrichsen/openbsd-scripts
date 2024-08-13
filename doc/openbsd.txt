@@ -1,0 +1,22 @@
+sudo pkg install xorg
+sudo pkg install lightdm
+sudo pkg install slick-greeter
+sudo pkg install xfce
+
+
+
+
+
+XFCE on OpenBSD:
+vi /etc/doas.conf
+	- permit nopass :wheel
+doas pkg_add -iv xfce
+doas pkg_add -iv slim slim-themes
+add the following to .xinitrc:
+	exec startxfce4
+create /etc/rc.local
+	-add /usr/local/bin/slim -d
+create /etc/rc.conf.local
+	- add pkg_scripts=" dbus_daemon avahi_daemon"
+	-dbus_enable=YES
+reboot
